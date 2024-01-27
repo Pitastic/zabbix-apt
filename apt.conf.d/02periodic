@@ -1,2 +1,0 @@
-APT::Periodic::Enable "1";
-APT::Periodic::Update-Package-Lists "1";

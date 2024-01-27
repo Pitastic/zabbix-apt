@@ -1,170 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>3.2</version>
-    <date>2017-01-29T14:52:23Z</date>
-    <groups>
-        <group>
-            <name>Templates</name>
-        </group>
-    </groups>
+    <version>6.4</version>
+    <template_groups>
+        <template_group>
+            <uuid>a571c0d144b14fd4a87a9d9b2aa9fcd6</uuid>
+            <name>Templates/Applications</name>
+        </template_group>
+    </template_groups>
     <templates>
         <template>
-            <template>Template App APT Updates</template>
-            <name>Template App APT Updates</name>
-            <description/>
+            <uuid>ab900107205f48a5a79f6e83aaf610b9</uuid>
+            <template>APT Updates</template>
+            <name>APT Updates</name>
             <groups>
                 <group>
-                    <name>Templates</name>
+                    <name>Templates/Applications</name>
                 </group>
             </groups>
-            <applications>
-                <application>
-                    <name>APT</name>
-                </application>
-            </applications>
             <items>
                 <item>
-                    <name>Security Updates</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>apt.security</key>
+                    <uuid>dc367dd63ab745a0ab0858971c6e5267</uuid>
+                    <name>Update List</name>
+                    <key>apt.list</key>
                     <delay>900</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>APT</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <description>Show the package which can be upgraded</description>
+                    <tags>
+                        <tag>
+                            <tag>application</tag>
+                            <value>apt</value>
+                        </tag>
+                        <tag>
+                            <tag>component</tag>
+                            <value>software</value>
+                        </tag>
+                        <tag>
+                            <tag>os</tag>
+                            <value>linux</value>
+                        </tag>
+                    </tags>
                 </item>
                 <item>
+                    <uuid>7e25def970a84995b72a546bdb02c5c5</uuid>
+                    <name>Security Updates</name>
+                    <key>apt.security</key>
+                    <delay>900</delay>
+                    <tags>
+                        <tag>
+                            <tag>application</tag>
+                            <value>apt</value>
+                        </tag>
+                        <tag>
+                            <tag>component</tag>
+                            <value>software</value>
+                        </tag>
+                        <tag>
+                            <tag>os</tag>
+                            <value>linux</value>
+                        </tag>
+                    </tags>
+                </item>
+                <item>
+                    <uuid>61b656de95544835984db066a375465a</uuid>
                     <name>Non-Critical Updates</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
                     <key>apt.updates</key>
                     <delay>900</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>APT</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                    <logtimefmt/>
+                    <tags>
+                        <tag>
+                            <tag>application</tag>
+                            <value>apt</value>
+                        </tag>
+                        <tag>
+                            <tag>component</tag>
+                            <value>software</value>
+                        </tag>
+                        <tag>
+                            <tag>os</tag>
+                            <value>linux</value>
+                        </tag>
+                    </tags>
                 </item>
             </items>
-            <discovery_rules/>
-            <httptests/>
-            <macros/>
-            <templates/>
-            <screens/>
+            <tags>
+                <tag>
+                    <tag>class</tag>
+                    <value>os</value>
+                </tag>
+                <tag>
+                    <tag>component</tag>
+                    <value>environment</value>
+                </tag>
+                <tag>
+                    <tag>component</tag>
+                    <value>security</value>
+                </tag>
+                <tag>
+                    <tag>target</tag>
+                    <value>linux</value>
+                </tag>
+            </tags>
         </template>
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template App APT Updates:apt.security.last()}&gt;0 and {Template App APT Updates:apt.updates.last()}&gt;0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
+            <uuid>e2fdafc15f5b4d5da61b2bbdadcb1735</uuid>
+            <expression>last(/APT Updates/apt.security)&gt;0 and last(/APT Updates/apt.updates)&gt;0 and length(last(/APT Updates/apt.list))&gt;0</expression>
             <name>{ITEM.LASTVALUE1} security and {ITEM.LASTVALUE2} regular updates on {HOST.NAME}</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <manual_close>1</manual_close>
-            <dependencies/>
-            <tags/>
+            <priority>WARNING</priority>
+            <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <expression>{Template App APT Updates:apt.updates.last()}&gt;0 and {Template App APT Updates:apt.security.last()}=0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
+            <uuid>61d9a47e71914a21ab18499d2fe1f4c2</uuid>
+            <expression>last(/APT Updates/apt.updates)&gt;0 and last(/APT Updates/apt.security)=0 and length(last(/APT Updates/apt.list))&gt;0</expression>
             <name>{ITEM.LASTVALUE} regular updates on {HOST.NAME}</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>1</priority>
-            <description/>
-            <type>0</type>
-            <manual_close>1</manual_close>
-            <dependencies/>
-            <tags/>
+            <priority>INFO</priority>
+            <manual_close>YES</manual_close>
         </trigger>
         <trigger>
-            <expression>{Template App APT Updates:apt.security.last()}&gt;0 and {Template App APT Updates:apt.updates.last()}=0</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
+            <uuid>c1083010fed846a199220a0685a7e998</uuid>
+            <expression>last(/APT Updates/apt.security)&gt;0 and last(/APT Updates/apt.updates)=0 and last(/APT Updates/apt.list)&gt;0</expression>
             <name>{ITEM.LASTVALUE} security updates on {HOST.NAME}</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <manual_close>1</manual_close>
-            <dependencies/>
-            <tags/>
+            <priority>WARNING</priority>
+            <manual_close>YES</manual_close>
         </trigger>
     </triggers>
 </zabbix_export>
