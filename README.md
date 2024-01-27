@@ -3,7 +3,7 @@ Zabbix template for monitoring APT package updates.
 This template uses `-s` simulation option when invoking `apt-get`, so no root access is needed for Zabbix user during polling.
 
 # Installation
-1. Copy `apt.conf.d/02periodic` script to `/etc/apt/apt.conf.d` directory to configure daily automatic package repository updates using `APT::Periodic`.
+1. Create a `cron` entry (see below)
 2. Copy `zabbix_agentd.d/apt.conf` to the Zabbix agent's configuration directory (usually located in `/etc/zabbix`).
 3. Import `templates/apt-updates.xml` to Zabbix frontend.
 
